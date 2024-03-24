@@ -1,0 +1,6 @@
+<launch>
+    <!-- my_img_proc -->
+    <node name="image_proc" pkg="imgProc" type="setup" required="true" output="screen">
+        <rosparam command="load" file="$(find imgProc)/config/param.yaml" />
+    </node>
+</launch>

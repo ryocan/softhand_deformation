@@ -1,0 +1,42 @@
+##############################################################
+# param.yaml
+##############################################################
+
+# On-line: 0 ,Off-line: 1
+Flag: 0
+
+# Calibrated bending angle [rad]
+Bending_Angle_Left: 0.38
+Bending_Angle_Right: -0.51
+
+# Bending_Angle_Right: -0.478   # 119
+# Bending_Angle_Right: -0.490   # 105
+# Bending_Angle_Right: -0.478   # 91
+
+# Num of segment
+Number_of_segment: 20
+
+# threshold for deque
+dequeTh: 10  ## real time: 2
+
+# HSV parameter: Hand 
+H_MIN_HAND: 0
+H_MAX_HAND: 179
+S_MIN_HAND: 0
+S_MAX_HAND: 255
+V_MIN_HAND: 0
+V_MAX_HAND: 70
+
+
+# HSV parameter: Object
+H_MIN_OBJ: 0
+H_MAX_OBJ: 30
+S_MIN_OBJ: 64
+S_MAX_OBJ: 255
+V_MIN_OBJ: 0
+V_MAX_OBJ: 255 
+
+# path
+PATH_INPUT: "/home/umelab-pgi5g/softhand_data/heart/test/imgSrc.jpg"
+PATH_INPUT2: "/home/umelab-pgi5g/softhand_data/imgSrcCompare.jpg"
+PATH_OUTPUT: "/home/umelab-pgi5g/softhand_data/ImagesForPaper/example/130/"
