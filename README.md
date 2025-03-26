@@ -10,8 +10,11 @@ roslaunch realsense2_camera rs_aligned_depth.launch
 カメラの場合，透視投影になるので，パースがかかる．
 しかし，本手法では，ソフトグリッパのグリッパ表面のみの情報を利用したい．
 ので，深度画像と組み合わせて，カメラから一定の距離のカラー情報のみを保存するプログラムを作っている．
+
 ・Color Image: RealSenseの画像
+
 ・Processed Image: カメラから一定距離以内のピクセルのみ表示したもの．それ以外は白色で描写
+
 (なお，ノイズの影響や，テクスチャレスな部分のステレオカメラの対応点問題までは考慮できていない)
 ```
 rosrun imgProc realsense_img_pub
@@ -32,7 +35,9 @@ rosrun imgProc setup
 #### 4. 変形推定
 上記手順2で生成した画像を入力画像として変形推定を行う．
 なお，deformation.launchの実行に関連するファイルは， src/deformation.cppおよびsrc/procCommon.cppを参照．
+
 ・imgOutputEstColor: 変形推定の結果
+
 ・Deformation Estimation: その時の結果を描画．'d'キーで結果描写，'r'で描写クリア．
 ```
 roslaunch imgProc deformation.launch
